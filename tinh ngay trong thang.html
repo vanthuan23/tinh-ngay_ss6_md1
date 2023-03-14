@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thang co bao nhieu ngay</title>
+</head>
+<body>
+<input id="day" type="text">
+<button id="month" onclick="number()">tinh so ngay</button>
+<script>
+    function number() {
+        let day = +document.getElementById('day').value;
+        console.log(day);
+        let thang = +document.getElementById('month').value;
+        console.log(thang)
+        switch (day) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.write("Thang " + day + " co 31 ngay");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.write("Thang " + day + " co 30 ngay");
+                break;
+            case 2:
+                document.write("Thang 2 co 28 hoac 29 ngay");
+                break;
+            default:
+                document.write("khong hop le");
+        }
+    }
+</script>
+</body>
+</html>
